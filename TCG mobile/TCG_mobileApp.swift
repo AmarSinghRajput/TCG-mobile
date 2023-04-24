@@ -11,7 +11,7 @@ import SwiftUI
 struct TCG_mobileApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
         }
     }
 }

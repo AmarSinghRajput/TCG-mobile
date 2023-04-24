@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		19EE854F29F65E34009BEE96 /* TCG_mobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE854E29F65E34009BEE96 /* TCG_mobileApp.swift */; };
-		19EE855129F65E34009BEE96 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE855029F65E34009BEE96 /* ContentView.swift */; };
 		19EE855329F65E35009BEE96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19EE855229F65E35009BEE96 /* Assets.xcassets */; };
 		19EE855629F65E35009BEE96 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19EE855529F65E35009BEE96 /* Preview Assets.xcassets */; };
+		19EE855E29F6772B009BEE96 /* TextfieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE855D29F6772B009BEE96 /* TextfieldWithIcon.swift */; };
+		19EE856029F69044009BEE96 /* HorizoantalLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE855F29F69044009BEE96 /* HorizoantalLine.swift */; };
+		19EE856529F69101009BEE96 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE856429F69101009BEE96 /* LoginView.swift */; };
+		19EE856729F6918B009BEE96 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE856629F6918B009BEE96 /* LoginViewModel.swift */; };
+		19EE856A29F691AA009BEE96 /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE856929F691AA009BEE96 /* Validations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		19EE854B29F65E34009BEE96 /* TCG mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TCG mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19EE854E29F65E34009BEE96 /* TCG_mobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCG_mobileApp.swift; sourceTree = "<group>"; };
-		19EE855029F65E34009BEE96 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		19EE855229F65E35009BEE96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19EE855529F65E35009BEE96 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		19EE855D29F6772B009BEE96 /* TextfieldWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldWithIcon.swift; sourceTree = "<group>"; };
+		19EE855F29F69044009BEE96 /* HorizoantalLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizoantalLine.swift; sourceTree = "<group>"; };
+		19EE856429F69101009BEE96 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		19EE856629F6918B009BEE96 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		19EE856929F691AA009BEE96 /* Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +59,10 @@
 		19EE854D29F65E34009BEE96 /* TCG mobile */ = {
 			isa = PBXGroup;
 			children = (
+				19EE856829F69196009BEE96 /* Utility */,
+				19EE856129F690C0009BEE96 /* Authentication */,
+				19EE855C29F6770B009BEE96 /* ReusableViews */,
 				19EE854E29F65E34009BEE96 /* TCG_mobileApp.swift */,
-				19EE855029F65E34009BEE96 /* ContentView.swift */,
 				19EE855229F65E35009BEE96 /* Assets.xcassets */,
 				19EE855429F65E35009BEE96 /* Preview Content */,
 			);
@@ -65,6 +75,48 @@
 				19EE855529F65E35009BEE96 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		19EE855C29F6770B009BEE96 /* ReusableViews */ = {
+			isa = PBXGroup;
+			children = (
+				19EE855D29F6772B009BEE96 /* TextfieldWithIcon.swift */,
+				19EE855F29F69044009BEE96 /* HorizoantalLine.swift */,
+			);
+			path = ReusableViews;
+			sourceTree = "<group>";
+		};
+		19EE856129F690C0009BEE96 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				19EE856329F690EB009BEE96 /* View */,
+				19EE856229F690E1009BEE96 /* ViewModel */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		19EE856229F690E1009BEE96 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				19EE856629F6918B009BEE96 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		19EE856329F690EB009BEE96 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				19EE856429F69101009BEE96 /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		19EE856829F69196009BEE96 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				19EE856929F691AA009BEE96 /* Validations.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +189,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19EE855129F65E34009BEE96 /* ContentView.swift in Sources */,
+				19EE855E29F6772B009BEE96 /* TextfieldWithIcon.swift in Sources */,
+				19EE856A29F691AA009BEE96 /* Validations.swift in Sources */,
+				19EE856729F6918B009BEE96 /* LoginViewModel.swift in Sources */,
 				19EE854F29F65E34009BEE96 /* TCG_mobileApp.swift in Sources */,
+				19EE856529F69101009BEE96 /* LoginView.swift in Sources */,
+				19EE856029F69044009BEE96 /* HorizoantalLine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
