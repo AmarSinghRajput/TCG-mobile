@@ -22,6 +22,7 @@ struct TextfieldWithIcon: View {
             if isSecure {
                 ZStack(alignment: .trailing) {
                     SecureField(placeholder, text: $text)
+                        .textInputAutocapitalization(.never)
                     if let overlay = overlay {
                         overlay
                     }
@@ -29,6 +30,7 @@ struct TextfieldWithIcon: View {
             } else {
                 ZStack(alignment: .trailing) {
                     TextField(placeholder, text: $text)
+                        .textInputAutocapitalization(.never)
                     if let overlay = overlay {
                         overlay
                     }

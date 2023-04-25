@@ -5,7 +5,7 @@
 //  Created by Amar Kumar Singh on 24/04/23.
 //
 
-class Validations {
+class ValidationsHelper {
     static func isValidUsername(name: String) -> Bool {
         return name != ""
     }

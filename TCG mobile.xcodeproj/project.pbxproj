@@ -15,6 +15,10 @@
 		19EE856529F69101009BEE96 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE856429F69101009BEE96 /* LoginView.swift */; };
 		19EE856729F6918B009BEE96 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE856629F6918B009BEE96 /* LoginViewModel.swift */; };
 		19EE856A29F691AA009BEE96 /* Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE856929F691AA009BEE96 /* Validations.swift */; };
+		19EE856D29F79081009BEE96 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE856C29F79081009BEE96 /* APIHelper.swift */; };
+		19EE857029F79248009BEE96 /* AppURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE856F29F79248009BEE96 /* AppURLs.swift */; };
+		19EE857529F7A4DA009BEE96 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE857429F7A4DA009BEE96 /* LoginModel.swift */; };
+		19EE857729F7A9F7009BEE96 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE857629F7A9F7009BEE96 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,11 @@
 		19EE856429F69101009BEE96 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		19EE856629F6918B009BEE96 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		19EE856929F691AA009BEE96 /* Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validations.swift; sourceTree = "<group>"; };
+		19EE856C29F79081009BEE96 /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		19EE856F29F79248009BEE96 /* AppURLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppURLs.swift; sourceTree = "<group>"; };
+		19EE857429F7A4DA009BEE96 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		19EE857629F7A9F7009BEE96 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		19EE857829F7B1FB009BEE96 /* TCG-mobile-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TCG-mobile-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +68,9 @@
 		19EE854D29F65E34009BEE96 /* TCG mobile */ = {
 			isa = PBXGroup;
 			children = (
+				19EE857829F7B1FB009BEE96 /* TCG-mobile-Info.plist */,
+				19EE856E29F79237009BEE96 /* Resources */,
+				19EE856B29F78F64009BEE96 /* Services */,
 				19EE856829F69196009BEE96 /* Utility */,
 				19EE856129F690C0009BEE96 /* Authentication */,
 				19EE855C29F6770B009BEE96 /* ReusableViews */,
@@ -89,6 +101,7 @@
 		19EE856129F690C0009BEE96 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				19EE857329F7A4D0009BEE96 /* Model */,
 				19EE856329F690EB009BEE96 /* View */,
 				19EE856229F690E1009BEE96 /* ViewModel */,
 			);
@@ -117,6 +130,31 @@
 				19EE856929F691AA009BEE96 /* Validations.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		19EE856B29F78F64009BEE96 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				19EE856F29F79248009BEE96 /* AppURLs.swift */,
+				19EE856C29F79081009BEE96 /* APIHelper.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		19EE856E29F79237009BEE96 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				19EE857629F7A9F7009BEE96 /* Constants.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		19EE857329F7A4D0009BEE96 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				19EE857429F7A4DA009BEE96 /* LoginModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,12 +227,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19EE856D29F79081009BEE96 /* APIHelper.swift in Sources */,
+				19EE857729F7A9F7009BEE96 /* Constants.swift in Sources */,
 				19EE855E29F6772B009BEE96 /* TextfieldWithIcon.swift in Sources */,
 				19EE856A29F691AA009BEE96 /* Validations.swift in Sources */,
 				19EE856729F6918B009BEE96 /* LoginViewModel.swift in Sources */,
 				19EE854F29F65E34009BEE96 /* TCG_mobileApp.swift in Sources */,
+				19EE857529F7A4DA009BEE96 /* LoginModel.swift in Sources */,
 				19EE856529F69101009BEE96 /* LoginView.swift in Sources */,
 				19EE856029F69044009BEE96 /* HorizoantalLine.swift in Sources */,
+				19EE857029F79248009BEE96 /* AppURLs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +367,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TCG mobile/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TCG-mobile-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -353,6 +396,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"TCG mobile/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "TCG-mobile-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
