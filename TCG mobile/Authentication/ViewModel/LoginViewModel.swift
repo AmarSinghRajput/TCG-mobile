@@ -8,6 +8,8 @@
 import Foundation
 import SwiftUI
 import Combine
+import GoogleSignIn
+import GoogleSignInSwift
 
 class LoginViewModel: ObservableObject {
     @Published var username: String = ""
@@ -18,6 +20,8 @@ class LoginViewModel: ObservableObject {
     @Published var alertTitle: String = ""
     @Published var alertMessage: String = ""
     @Published var isLoading = false
+    @Published var googleUser: GIDGoogleUser? = nil
+    
     //used for deallocating any subscription to avoid memory leaks
     private var cancellableSet: Set<AnyCancellable> = []
     
@@ -64,6 +68,19 @@ class LoginViewModel: ObservableObject {
                     }
                     completion(false)
                 }
+            }
+        }
+    }
+    
+    func handleGoogleSignInButton() {
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            if let rootViewController = windowScene.windows.first?.rootViewController {
+                GIDSignIn.sharedInstance.signIn(
+                    withPresenting: rootViewController) { signInResult, error in
+                        guard error == nil else { return }
+                            guard let signInResult = signInResult else { return }
+                            self.googleUser = signInResult.user
+                    }
             }
         }
     }

@@ -68,7 +68,7 @@ struct LoginView: View {
             HStack(alignment: .center, spacing: 10){
                 Spacer()
                 Button(action: {
-                    print("goole button tapped")
+                    viewModel.handleGoogleSignInButton()
                 }) {
                     Image("googleLogo")
                         .frame(width: 50, height: 50, alignment: .center)
