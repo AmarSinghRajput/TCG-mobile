@@ -91,7 +91,8 @@ struct LoginView: View {
             }
             Spacer()            
         }
-        .padding([.horizontal], 30)        
+        .padding([.horizontal], 30)
+        .withLoading(isLoading: $viewModel.isLoading)
     }
 }
     

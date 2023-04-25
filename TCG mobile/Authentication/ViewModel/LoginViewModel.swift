@@ -17,6 +17,7 @@ class LoginViewModel: ObservableObject {
     @Published var shouldShowAlert = false
     @Published var alertTitle: String = ""
     @Published var alertMessage: String = ""
+    @Published var isLoading = false
     //used for deallocating any subscription to avoid memory leaks
     private var cancellableSet: Set<AnyCancellable> = []
     
@@ -43,7 +44,7 @@ class LoginViewModel: ObservableObject {
             completion(false)
             
         }else {
-            
+            isLoading = true
             let params = "username=\(username)&password=\(password)"
             APIHelper.shared.post(endpoint: .login, data: params) { [weak self] (result: Result<LoginResponse, APIError>) in
                 switch result {
@@ -51,6 +52,7 @@ class LoginViewModel: ObservableObject {
                     print("\(String(describing: data.access_token))")
                     DispatchQueue.main.async {
                         self?.shouldShowAlert = false
+                        self?.isLoading = false
                     }
                     completion(true)
                 case .failure(let error):
@@ -58,6 +60,7 @@ class LoginViewModel: ObservableObject {
                         self?.shouldShowAlert = true
                         self?.alertTitle = "something went wrong"
                         self?.alertMessage = error.localizedDescription
+                        self?.isLoading = false
                     }
                     completion(false)
                 }

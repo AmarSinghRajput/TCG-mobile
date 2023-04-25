@@ -19,6 +19,7 @@
 		19EE857029F79248009BEE96 /* AppURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE856F29F79248009BEE96 /* AppURLs.swift */; };
 		19EE857529F7A4DA009BEE96 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE857429F7A4DA009BEE96 /* LoginModel.swift */; };
 		19EE857729F7A9F7009BEE96 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE857629F7A9F7009BEE96 /* Constants.swift */; };
+		19EE857A29F7D531009BEE96 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EE857929F7D531009BEE96 /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		19EE857429F7A4DA009BEE96 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		19EE857629F7A9F7009BEE96 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		19EE857829F7B1FB009BEE96 /* TCG-mobile-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "TCG-mobile-Info.plist"; sourceTree = SOURCE_ROOT; };
+		19EE857929F7D531009BEE96 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			children = (
 				19EE855D29F6772B009BEE96 /* TextfieldWithIcon.swift */,
 				19EE855F29F69044009BEE96 /* HorizoantalLine.swift */,
+				19EE857929F7D531009BEE96 /* LoadingView.swift */,
 			);
 			path = ReusableViews;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				19EE856D29F79081009BEE96 /* APIHelper.swift in Sources */,
 				19EE857729F7A9F7009BEE96 /* Constants.swift in Sources */,
 				19EE855E29F6772B009BEE96 /* TextfieldWithIcon.swift in Sources */,
+				19EE857A29F7D531009BEE96 /* LoadingView.swift in Sources */,
 				19EE856A29F691AA009BEE96 /* Validations.swift in Sources */,
 				19EE856729F6918B009BEE96 /* LoginViewModel.swift in Sources */,
 				19EE854F29F65E34009BEE96 /* TCG_mobileApp.swift in Sources */,
