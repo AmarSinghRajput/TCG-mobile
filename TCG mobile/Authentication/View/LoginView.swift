@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct LoginView: View {
-    @ObservedObject private var viewModel = LoginViewModel()
+    @ObservedObject private var viewModel: LoginViewModel
     @State private var securePassword: Bool = true
     
+    init(viewModel: LoginViewModel) {
+        self.viewModel = viewModel
+    }
+
     var body: some View {
         VStack(alignment: .trailing, spacing: 8){
             Spacer()
@@ -99,6 +103,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView(viewModel: LoginViewModel())
     }
 }

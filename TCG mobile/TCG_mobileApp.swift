@@ -13,7 +13,8 @@ import GoogleSignInSwift
 struct TCG_mobileApp: App {
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            let loginViewModel = LoginViewModel()
+            LoginView(viewModel: loginViewModel)
                 .onOpenURL { url in
                     GIDSignIn.sharedInstance.handle(url)
                 }
