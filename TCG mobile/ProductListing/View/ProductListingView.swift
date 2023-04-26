@@ -16,11 +16,12 @@ struct ProductListingView: View {
     
     var body: some View {
         Text("This would be our product listing page!")
+            .navigationBarBackButtonHidden(true)
     }
 }
 
 struct ProductListingView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductListingView(viewModel: ProductListingViewModel())
+        ProductListingView(viewModel: ProductListingViewModel(navigationPath: NavigationPath()))
     }
 }

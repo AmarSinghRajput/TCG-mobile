@@ -6,10 +6,14 @@
 //
 
 import Foundation
+import SwiftUI
 
 class ProductListingViewModel: ObservableObject {
-    @Published var someValue = Int()
+    @Published var path: NavigationPath
     
-    
+    init(navigationPath: NavigationPath) {
+        self.path = navigationPath
+    }
+
 }
 

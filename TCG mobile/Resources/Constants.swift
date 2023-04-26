@@ -14,3 +14,6 @@ struct Alerts {
     static let invalidPassTitle = "Invalid password"
     static let invalidPassMessage = "password should be more than 8 characters/digits"
 }
+struct AppStorageKey {
+    static let authToken = "authToken"
+}

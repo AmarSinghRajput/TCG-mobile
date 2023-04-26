@@ -21,11 +21,13 @@ class LoginViewModel: ObservableObject {
     @Published var alertMessage: String = ""
     @Published var isLoading = false
     @Published var googleUser: GIDGoogleUser? = nil
-    
+    @Published var path: NavigationPath
+    @AppStorage(AppStorageKey.authToken) var authToken: String = ""
     //used for deallocating any subscription to avoid memory leaks
     private var cancellableSet: Set<AnyCancellable> = []
     
-    init() {
+    init(navigationPath: NavigationPath) {
+        self.path = navigationPath
         //here we are subscribing to username,pass for changes and checking validations
         Publishers.CombineLatest($username, $password)
             .sink { [weak self] username, password in
@@ -54,6 +56,11 @@ class LoginViewModel: ObservableObject {
                 switch result {
                 case .success(let data):
                     print("\(String(describing: data.access_token))")
+                    if let token = data.access_token {
+                        DispatchQueue.main.async {
+                            self?.authToken = token
+                        }
+                    }
                     DispatchQueue.main.async {
                         self?.shouldShowAlert = false
                         self?.isLoading = false

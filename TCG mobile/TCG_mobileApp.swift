@@ -12,12 +12,19 @@ import GoogleSignInSwift
 @main
 struct TCG_mobileApp: App {
     var body: some Scene {
+        @AppStorage(AppStorageKey.authToken) var authToken: String = ""
+        
         WindowGroup {
-            let loginViewModel = LoginViewModel()
-            LoginView(viewModel: loginViewModel)
-                .onOpenURL { url in
-                    GIDSignIn.sharedInstance.handle(url)
-                }
+            let loginViewModel = LoginViewModel(navigationPath: NavigationPath())
+            if authToken == "" {
+                LoginView(viewModel: loginViewModel)
+                    .onOpenURL { url in
+                        GIDSignIn.sharedInstance.handle(url)
+                    }
+            }else {
+                ProductListingView(viewModel: ProductListingViewModel(navigationPath: NavigationPath()))
+            }
+            
         }
     }
 }
