@@ -9,14 +9,32 @@ import SwiftUI
 
 struct ProductListingView: View {
     @ObservedObject var viewModel: ProductListingViewModel
+    let products = (1...20).map { "Product \($0)" }
     
     init(viewModel: ProductListingViewModel) {
         self.viewModel = viewModel
     }
     
     var body: some View {
-        Text("This would be our product listing page!")
+        NavigationStack{
+            List(products, id: \.self) { text in
+                Text(text)
+            }.toolbar{
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("refreshToken") {
+                        viewModel.refreshToken { result in
+                            print(result)
+                        }
+                    }
+                    .alert(isPresented: $viewModel.shouldShowAlert) {
+                        Alert(title: Text(viewModel.alertTitle), message: Text(viewModel.alertMessage), dismissButton: .default(Text("OK")))
+                    }
+                }
+            }
             .navigationBarBackButtonHidden(true)
+            .navigationBarTitleDisplayMode(.inline)
+            .withLoading(isLoading: $viewModel.isLoading)
+        }
     }
 }
 

@@ -66,6 +66,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1977518529FA3F7B0023B8E4 /* ProductDescription */ = {
+			isa = PBXGroup;
+			children = (
+				1977518629FA3F930023B8E4 /* Model */,
+				1977518729FA3F980023B8E4 /* View */,
+				1977518829FA3F9D0023B8E4 /* ViewModel */,
+			);
+			path = ProductDescription;
+			sourceTree = "<group>";
+		};
+		1977518629FA3F930023B8E4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1977518729FA3F980023B8E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1977518829FA3F9D0023B8E4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1977518929FA704A0023B8E4 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
 		19EE854229F65E34009BEE96 = {
 			isa = PBXGroup;
 			children = (
@@ -89,12 +127,14 @@
 			children = (
 				19EE857829F7B1FB009BEE96 /* TCG-mobile-Info.plist */,
 				19EE857E29F7DF93009BEE96 /* credentials.plist */,
+				1977518929FA704A0023B8E4 /* Theme */,
 				19EE858029F8E6A1009BEE96 /* Navigation */,
 				19EE856E29F79237009BEE96 /* Resources */,
 				19EE856B29F78F64009BEE96 /* Services */,
 				19EE856829F69196009BEE96 /* Utility */,
 				19EE856129F690C0009BEE96 /* Authentication */,
 				19EE858329F92A25009BEE96 /* ProductListing */,
+				1977518529FA3F7B0023B8E4 /* ProductDescription */,
 				19EE855C29F6770B009BEE96 /* ReusableViews */,
 				19EE854E29F65E34009BEE96 /* TCG_mobileApp.swift */,
 				19EE855229F65E35009BEE96 /* Assets.xcassets */,
